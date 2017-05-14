@@ -1,0 +1,2 @@
+# myserver
+Scratch django server

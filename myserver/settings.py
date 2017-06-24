@@ -116,7 +116,7 @@ STATICFILES_FINDERS = [
 ]
 
 # Django-bower
-BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'bower_components')
+BOWER_COMPONENTS_ROOT = BASE_DIR  # 'bower_components' folder is in base project dir - change if in app
 
 BOWER_INSTALLED_APPS = (
     'jquery',

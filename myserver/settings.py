@@ -115,5 +115,15 @@ STATICFILES_FINDERS = [
     'djangobower.finders.BowerFinder',
 ]
 
-# Django-bower component root:
+# Django-bower
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'bower_components')
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'datatables',
+)
+
+# Template settings
+TEMPLATE_DIRS = [
+    os.path.join(BASE_DIR, '/myapp/templates')
+]

@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 def base_view(request):
 
-    return render(request, 'templates/base.html', {'test': 'IT WORKS!'})
+    return render(request, 'base.html', {'test': 'IT WORKS!'})

@@ -121,6 +121,7 @@ BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'bower_components')
 BOWER_INSTALLED_APPS = (
     'jquery',
     'datatables',
+    'datatables.net-bs',
     'bootstrap',
 )
 

@@ -122,8 +122,9 @@ BOWER_INSTALLED_APPS = (
     'jquery',
     'datatables',
     'datatables-plugins',
-    'bootstrap-responsive',
+    'datatables-responsive',
     'bootstrap',
+    'bootstrap-social',
 )
 
 # Template settings

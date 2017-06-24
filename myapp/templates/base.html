@@ -3,12 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+
+    {% load static %}
+    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/datatables/media/js/jquery.dataTables.min.js' %}"></script>
+
 </head>
 <body>
 
     <h1>This is a Test, woo!</h1>
 
     <p>Test template: {{ test }}</p>
+
+    <hr>
+
+    <table id="virgin-table">
+
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+            </tr>
+
+            <tr>
+                <td>Content 4</td>
+                <td>Content 5</td>
+                <td>Content 6</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+
+        $('#virgin-table').dataTable({
+            responsive: true,
+            "aaSorting": []
+        });
+
+    </script>
 
 </body>
 </html>

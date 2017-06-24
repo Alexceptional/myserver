@@ -26,165 +26,165 @@
 <body>
 
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; {{ header_colour }}">
-            <div class="navbar-header">
-                <a class="navbar-brand" style="padding-top:10px;" href="https://www.tentel.co.uk/" target="_blank">
-                    <img src="{% static 'images/tentel-logo.png' %}" style='width:60%!important;' alt='tentel logo' />
+        <div class="navbar-header">
+            <a class="navbar-brand" style="padding-top:10px;" href="https://www.tentel.co.uk/" target="_blank">
+                <img src="" style='width:60%!important;' alt='tentel logo' />
+            </a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> &nbsp;&nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}&nbsp;&nbsp;
+                    <i class="fa fa-caret-down"></i>
                 </a>
-            </div>
-            <!-- /.navbar-header -->
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <i class="fa fa-bug fa-fw"></i> Create bug report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#PostModal">
+                            <i class="fa fa-align-center fa-fw"></i> Postcode Checker
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#RequestModal">
+                            <i class="fa fa-question fa-fw"></i> Request Form
+                        </a>
+                    </li>
 
-            <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-lock fa-fw"></i> Change password
+                        </a>
+                    </li>
+                    <li class="divider">
 
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> &nbsp;&nbsp;{{ user.first_name }}&nbsp;{{ user.last_name }}&nbsp;&nbsp;
-                        <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#myModal">
-                                <i class="fa fa-bug fa-fw"></i> Create bug report
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#PostModal">
-                                <i class="fa fa-align-center fa-fw"></i> Postcode Checker
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#RequestModal">
-                                <i class="fa fa-question fa-fw"></i> Request Form
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{% url 'password' %}">
-                                <i class="fa fa-lock fa-fw"></i> Change password
-                            </a>
-                        </li>
-                        <li class="divider">
-
-                        </li>
-                        <li>
-                            <a href="{% url "logout" %}">
-                                <i class="fa fa-sign-out fa-fw"></i> Logout
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="">
-                    <a>
-                         <span style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace;'>
-                         v{{ wow_version }}</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="">
-                    <a>
-                        <span style='font-family: Arial, sans-serif;'>
-                         © {% now "Y" %} TenTel Limited</span>
-                    </a>
-                </li>
-            </ul>
-            {% if header_colour != '' %}
-                <ul class="nav navbar-top-links navbar-right" style="margin-right: 18%">
-                    <li class="">
-                        <a>
-                            <span style='font-family: Arial, sans-serif;'>
-                             # # # &nbsp;&nbsp;&nbsp;DEVELOPMENT INSTANCE - <b>{{ header_name }}</b> &nbsp;&nbsp;&nbsp;# # #</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out fa-fw"></i> Logout
                         </a>
                     </li>
                 </ul>
-            {% endif %}
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="">
+                <a>
+                     <span style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace;'>
+                     v{{ wow_version }}</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="">
+                <a>
+                    <span style='font-family: Arial, sans-serif;'>
+                     © {% now "Y" %} TenTel Limited</span>
+                </a>
+            </li>
+        </ul>
+        {% if header_colour != '' %}
+            <ul class="nav navbar-top-links navbar-right" style="margin-right: 18%">
+                <li class="">
+                    <a>
+                        <span style='font-family: Arial, sans-serif;'>
+                         # # # &nbsp;&nbsp;&nbsp;DEVELOPMENT INSTANCE - <b>{{ header_name }}</b> &nbsp;&nbsp;&nbsp;# # #</span>
+                    </a>
+                </li>
+            </ul>
+        {% endif %}
 
-            <!-- /.navbar-top-links -->
-            <div class="navbar-default sidebar" role="navigation" style="background-color: transparent!important">
-                <div class="sidebar-nav navbar-collapse" style="padding: 15px 15px 15px 15px">
+        <!-- /.navbar-top-links -->
+        <div class="navbar-default sidebar" role="navigation" style="background-color: transparent!important">
+            <div class="sidebar-nav navbar-collapse" style="padding: 15px 15px 15px 15px">
 
-                    <!-- new menu! -->
-                    <div class="col-sm col-md">
-                        <div class="panel-group" id="accordion">
+                <!-- new menu! -->
+                <div class="col-sm col-md">
+                    <div class="panel-group" id="accordion">
 
+                        <div class="panel panel-default" style="margin-bottom: 15px">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="#"><span class="fa fa-home">
+                                    </span>&nbsp;&nbsp;Wowser Home</a>
+                                </h4>
+                            </div>
+                        </div>
+
+                        {% for dropdown in dropdowns %}
                             <div class="panel panel-default" style="margin-bottom: 15px">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="{% url 'home' %}"><span class="fa fa-home">
-                                        </span>&nbsp;&nbsp;Wowser Home</a>
-                                    </h4>
-                                </div>
+                                {% if not dropdown.link %}
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}">
+                                                <span class="fa {{ dropdown.icon }}"></span>&nbsp;&nbsp;{{ dropdown.title }}
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse">
+                                        <div class="panel-body" style="padding: 0 0 0 0">
+                                            <table class="table" style="margin-bottom: 0" width="100%">
+                                                {% for page in pages %}
+                                                    {% if dropdown.filter in page.perms %}
+                                                        <tr><td width="5%">
+                                                            <span class="fa {{ page.icon }}"></span>
+                                                            </td><td>
+                                                            <a href="/{{ page.link }}">{{ page.text }}</a>
+                                                        </td></tr>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </table>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a href="/{{ dropdown.link }}"><span class="fa {{ dropdown.icon }}">
+                                            </span>&nbsp;&nbsp;{{ dropdown.title }}</a>
+                                        </h4>
+                                    </div>
+                                {% endif %}
                             </div>
 
-                            {% for dropdown in dropdowns %}
-                                <div class="panel panel-default" style="margin-bottom: 15px">
-                                    {% if not dropdown.link %}
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}">
-                                                    <span class="fa {{ dropdown.icon }}"></span>&nbsp;&nbsp;{{ dropdown.title }}
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse">
-                                            <div class="panel-body" style="padding: 0 0 0 0">
-                                                <table class="table" style="margin-bottom: 0" width="100%">
-                                                    {% for page in pages %}
-                                                        {% if dropdown.filter in page.perms %}
-                                                            <tr><td width="5%">
-                                                                <span class="fa {{ page.icon }}"></span>
-                                                                </td><td>
-                                                                <a href="/{{ page.link }}">{{ page.text }}</a>
-                                                            </td></tr>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </table>
-                                            </div>
-                                        </div>
-                                    {% else %}
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a href="/{{ dropdown.link }}"><span class="fa {{ dropdown.icon }}">
-                                                </span>&nbsp;&nbsp;{{ dropdown.title }}</a>
-                                            </h4>
-                                        </div>
-                                    {% endif %}
-                                </div>
-
-                            {% endfor %}
-
-                        </div>
-                    </div>
-                    <!-- end new menu! -->
-
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                            // read what menu was last open
-                            // and set the side menu to that
-                            var lastCollapse = Cookies.get('cookie_collapse');
-                            console.log(lastCollapse);
-                            if(!lastCollapse) {
-                                $('#collapseOne').addClass('in');
-                            } else {
-                                var collapsed = '#' + lastCollapse;
-                                $(collapsed).addClass('in');
-                            }
-                        });
-                        {% for dropdown in dropdowns %}
-                            $('#collapse{{ forloop.counter }}').on('show.bs.collapse', function() {
-                                Cookies.set('cookie_collapse', $('#collapse{{ forloop.counter }}').attr('id'), { expires: 1 });
-                            });
                         {% endfor %}
-                    </script>
 
+                    </div>
                 </div>
-                <!-- /.sidebar-collapse -->
+                <!-- end new menu! -->
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        // read what menu was last open
+                        // and set the side menu to that
+                        var lastCollapse = Cookies.get('cookie_collapse');
+                        console.log(lastCollapse);
+                        if(!lastCollapse) {
+                            $('#collapseOne').addClass('in');
+                        } else {
+                            var collapsed = '#' + lastCollapse;
+                            $(collapsed).addClass('in');
+                        }
+                    });
+                    {% for dropdown in dropdowns %}
+                        $('#collapse{{ forloop.counter }}').on('show.bs.collapse', function() {
+                            Cookies.set('cookie_collapse', $('#collapse{{ forloop.counter }}').attr('id'), { expires: 1 });
+                        });
+                    {% endfor %}
+                </script>
+
             </div>
-        <!-- /.navbar-static-side -->
-        </nav>
+            <!-- /.sidebar-collapse -->
+        </div>
+    <!-- /.navbar-static-side -->
+    </nav>
 
     <div class="container">
 

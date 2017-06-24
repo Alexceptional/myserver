@@ -124,7 +124,6 @@ BOWER_INSTALLED_APPS = (
     'datatables-plugins',
     'bootstrap-responsive',
     'bootstrap',
-    'bootstrap-social',
 )
 
 # Template settings

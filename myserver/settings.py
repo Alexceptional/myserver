@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangobower',
+    # 'djangobower',
     'myapp',
 )
 
@@ -112,20 +112,20 @@ STATIC_URL = '/media/'
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'djangobower.finders.BowerFinder',
+    # 'djangobower.finders.BowerFinder',
 ]
 
 # Django-bower
-BOWER_COMPONENTS_ROOT = BASE_DIR  # 'bower_components' folder is in base project dir - change if in app
-
-BOWER_INSTALLED_APPS = (
-    'jquery',
-    'datatables',
-    'datatables-plugins',
-    'datatables-responsive',
-    'bootstrap',
-    'bootstrap-social',
-)
+# BOWER_COMPONENTS_ROOT = BASE_DIR  # 'bower_components' folder is in base project dir - change if in app
+#
+# BOWER_INSTALLED_APPS = (
+#     'jquery',
+#     'datatables',
+#     'datatables-plugins',
+#     'datatables-responsive',
+#     'bootstrap',
+#     'bootstrap-social',
+# )
 
 # Template settings
 TEMPLATE_DIRS = [

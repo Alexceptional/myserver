@@ -17,5 +17,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^base/$', 'myapp.views.base_view', name='base_view'),
+    url(r'^$', 'myapp.views.base_view', name='base_view'),
 ]

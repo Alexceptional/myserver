@@ -57,7 +57,7 @@ ROOT_URLCONF = 'myserver.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '/myapp/templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,13 +106,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'bower_components')
 STATIC_URL = '/media/'
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    # 'djangobower.finders.BowerFinder',
+    'djangobower.finders.BowerFinder',
 ]
 
 # Django-bower
@@ -127,7 +127,37 @@ STATICFILES_FINDERS = [
 #     'bootstrap-social',
 # )
 
-# Template settings
-TEMPLATE_DIRS = [
-    os.path.join(BASE_DIR, '/myapp/templates')
-]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+	'formatters': {
+        'verbose': {
+            'format': '%(levelname)s\t%(name)s %(asctime)s %(module)s %(process)d - %(message)s'
+        },
+    },
+	'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'myapp': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django.security': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    }
+}
+
